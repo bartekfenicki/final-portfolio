@@ -3,8 +3,10 @@ import { RouterLink, RouterView, useRouter } from 'vue-router'
 import {onMounted, ref} from "vue";
 import {getAuth, onAuthStateChanged, signOut} from "firebase/auth";
 import { initFlowbite } from 'flowbite'
+import image from './assets/img/avatar.png';
 const router = useRouter();
 const isLoggedIn = ref(false);
+const img = ref(image)
 
 let auth;
 
@@ -22,31 +24,11 @@ const signingOut = () => {
    signOut(auth).then(()=> {
       router.push("/")
    })
-}
+};
 
 onMounted(() => {
     initFlowbite();
 })
-
-</script>
-
-<script>
-export default {
-  data() {
-    return {
-      selectedItem: null,
-      isSidebarOpen: false,
-    };
-  },
-  methods: {
-    selectItem(item) {
-     
-      this.selectedItem = this.selectedItem === item ? null : item;
-    }
-   
-  },
-  
-};
 
 </script>
 
@@ -69,18 +51,23 @@ lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200
 </button>
 
 <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform lg:translate-x-0"
+
       :class="{ '-translate-x-full': !isSidebarOpen }" aria-label="Sidebar" ref="sidebar">
+      
+      
    <div class="h-full  py-4 overflow-y-auto"> 
 
       <div class="w-48 h-52 overflow-hidden me-auto ms-auto">
          <RouterLink to="/login">
-            <img class="w-full h-full object-cover object-bottom rounded border" src="../src/assets/img/avatar.PNG" alt="Default avatar">
+            <img class="w-full h-full object-cover object-bottom rounded border" :src="img"  alt="Default avatar"> 
          </RouterLink>
       </div>
-      <p v-if="isLoggedIn" class="text-white text-center m-0">  <RouterLink to="/admin">ADMIN</RouterLink></p>
+
+
+    <p v-if="isLoggedIn" class="text-white text-center m-0">  <RouterLink to="/admin">ADMIN</RouterLink></p>
       <p class="text-red-800 text-center m-0">
          <button v-if="isLoggedIn" @click.prevent="signingOut">log out</button>
-      </p>
+      </p> 
 
       <ul class="space-y-6 font-medium mt-6 flex flex-col text-center">
          <li class="w-full" @click="selectItem('item1')"
@@ -103,8 +90,8 @@ lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200
         :class="{ 'active': selectedItem === 'item5' }">
           <RouterLink to="/cv">MY CV</RouterLink>
          </li>
-      </ul>
-      <div class="border border-green-700 mt-8 mx-4">
+      </ul> 
+      <div class="border border-green-700 mt-8 mx-4 hidden lg:block">
             <p class="text-start  ms-1  text-green-700">
             CONTACT ME!
          </p>
@@ -119,7 +106,6 @@ lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200
    </div>
    
 </aside>
-
 
 <aside id="default-sidebar" class="fixed hidden lg:block top-0 right-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto">
@@ -185,7 +171,7 @@ lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200
    </div>
 </aside>
 
-
+ 
   <body>
     <RouterView />
   </body>
@@ -211,6 +197,6 @@ li {
 .active {
 background-color: #382C45;
 }
-
+ 
 
 </style>

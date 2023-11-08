@@ -1,4 +1,4 @@
-<template scoped>
+<template>
 
 <div class="p-4 lg:ml-64 lg:mr-64">
 
@@ -47,7 +47,7 @@
 
 </template>
 
-<script setup scoped>
+<script setup>
 import {ref , onMounted, reactive} from 'vue'
 import {db} from '../firebase.js'
 import {collection, onSnapshot, addDoc, deleteDoc, doc} from 'firebase/firestore'

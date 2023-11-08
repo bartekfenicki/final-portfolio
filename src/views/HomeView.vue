@@ -1,6 +1,4 @@
-<script setup>
 
-</script>
 
 <template>
  <div class=" p-4 lg:ml-64 lg:mr-64">
@@ -87,6 +85,18 @@
   free to explore and enjoy some of my projects alongside with my 
   private photo gallery!
   </p>
+
+  <div class="border border-green-700 mt-8 mx-4 block lg:hidden w-64 me-auto ms-auto mb-16">
+            <p class="text-start  ms-1 " style="color: rgb(22 163 74 );">
+            CONTACT ME!
+         </p>
+         <p class="text-end mt-4 me-1" style="color: rgb(22 163 74 );">
+            +45 81 92 02 94
+         </p>
+         <p class="text-end mt-2 me-1 mb-2" style="color: rgb(22 163 74 );">
+            bartek.fenicki@gmail.com
+         </p>
+      </div>
   
   
 </div>

@@ -30,17 +30,17 @@
 
     </template>
 
-    <script scoped>
+   <!--  <script>
   export default {
   data() {
     return {
       pdfFilePath: '../assets/img/cv-bartek-2024.pdf',
     };
   },
-};
+}; 
   
   </script>
-    
+   --> 
     <style scoped>
     .title-sub {
       font-size: 25px;

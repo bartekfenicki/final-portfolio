@@ -1,4 +1,4 @@
-<template scoped>
+<template>
 <div class="p-4 lg:ml-64 lg:mr-64">
     <div>
         <form @submit.prevent="addGraphic" class="flex flex-col justify-center  w-full">
@@ -39,7 +39,7 @@
 </template>
 
 
-<script setup scoped>
+<script setup>
 
 import {ref , onMounted, reactive} from 'vue'
 import {db} from '../firebase.js'
