@@ -14,13 +14,14 @@
             p-2.5 m-2">
 
             <input type="file" label="File input" ref="myfile" @change="uploadImg">
-
+            <p> Please wait aprox. 5s after submitting the image </p>
             <button type="submit" :disabled="!graphicName"
                 class="bg-transparent hover:bg-green-700 text-green-900 font-semibold
                 hover:text-white py-2 px-4 me-auto ms-auto w-48 border  border-green-700 hover:border-transparent rounded-lg">
                     Add a Graphic
             </button>
         </form>
+        
     </div>
     
 
