@@ -70,25 +70,20 @@ lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200
       </p> 
 
       <ul class="space-y-6 font-medium mt-6 flex flex-col text-center">
-         <li class="w-full" @click="selectItem('item1')"
-        :class="{ 'active': selectedItem === 'item1' }"> 
-          <RouterLink to="/">HOME</RouterLink>
+         <li class="w-full"> 
+          <RouterLink to="/" class="hover:text-white text-gray-300">HOME</RouterLink>
          </li>
-         <li class="w-full" @click="selectItem('item2')"
-        :class="{ 'active': selectedItem === 'item2' }">
-          <RouterLink to="/coding">CODING</RouterLink>
+         <li class="w-full">
+          <RouterLink to="/coding" class="hover:text-white text-gray-300">CODING</RouterLink>
          </li>
-         <li class="w-full" @click="selectItem('item3')"
-        :class="{ 'active': selectedItem === 'item3' }">
-          <RouterLink to="/graphics">GRAPHICS</RouterLink>
+         <li class="w-full">
+          <RouterLink to="/graphics" class="hover:text-white text-gray-300">GRAPHICS</RouterLink>
          </li>
-         <li class="w-full" @click="selectItem('item4')"
-        :class="{ 'active': selectedItem === 'item4' }">
-          <RouterLink to="/photography">PHOTOGRAPHY</RouterLink>
+         <li class="w-full" >
+          <RouterLink to="/photography" class="hover:text-white text-gray-300">PHOTOGRAPHY</RouterLink>
          </li>
-         <li class="w-full" @click="selectItem('item5')"
-        :class="{ 'active': selectedItem === 'item5' }">
-          <RouterLink to="/cv">MY CV</RouterLink>
+         <li class="w-full">
+          <RouterLink to="/cv" class="hover:text-white text-gray-300">MY CV</RouterLink>
          </li>
       </ul> 
       <div class="border border-green-700 mt-8 mx-4 hidden lg:block">
