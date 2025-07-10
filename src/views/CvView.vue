@@ -15,11 +15,16 @@
         allow="accelerometer; autoplay; 
         clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
       </iframe>
-      <!-- <p class="text-center text-lg mt-16">
-        <a :href="pdfFilePath" target="_blank" class="text-center px-16 py-4 text-green-600 hover:text-white  border-2 border-green-800 hover:bg-green-700  rounded-lg w-full">
-        View CV in PDF
+
+      <div class="mt-16 flex w-full justify-center">
+      <a
+        :href="cvUrl"
+        download="Bartek-Fenicki-CV.pdf"
+        class=" bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
+      >
+        📄 Get my CV
       </a>
-      </p> -->
+    </div>
       
 
 
@@ -29,18 +34,12 @@
     
 
     </template>
+  <script setup>
+  import cv from '@/assets/img/cv-bartek-2025-recent-kopia.pdf'
 
-   <!--  <script>
-  export default {
-  data() {
-    return {
-      pdfFilePath: '../assets/img/cv-bartek-2024.pdf',
-    };
-  },
-}; 
-  
+  const cvUrl = cv
   </script>
-   --> 
+
     <style scoped>
     .title-sub {
       font-size: 25px;

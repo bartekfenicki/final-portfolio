@@ -73,17 +73,19 @@
     AND I AM A 
   </p>
   <p class="title-main text-end me-6">
-    MULTIMEDIA DESIGNER
+    WEB DEVELOPER
   </p>
 
-  <p class="description  me-4 ms-4 sm:me-16 sm:ms-16 mt-10 sm:mt-36">
-    I am a Polish student currently studying the Multimedia Design 
-  course in the Business Academy Southwest located in Esbjerg, 
-  Denmark. I have always loved taking pictures and recording videos 
-  but recently I discovered my new passion for creating different 
-  types of digital work such as graphical and coding elements. Feel 
-  free to explore and enjoy some of my projects alongside with my 
-  private photo gallery!
+  <p class="description  me-4 ms-4 sm:me-16 sm:ms-16 mt-10 sm:mt-24">
+    I am a Polish student, Multimedia Design graduate, currently finishing my Bachelors Degree in Web Development
+  at the Business Academy Southwest located in Esbjerg, 
+  Denmark. I've always had a passion for photography, 
+  but over time I've discovered a deep interest in creating digital experiences
+   — from visual design to fully functional web applications. I'm fluent in JavaScript, 
+   TypeScript, PHP, SQL, and have hands-on experience with frameworks like Vue, Nuxt, Laravel, React and Next.js.
+    With a strong foundation in both frontend and backend development, 
+    I enjoy building complete, scalable solutions and managing databases to support them.
+     Feel free to explore my projects and enjoy a glimpse into my personal photo gallery as well!
   </p>
 
   <div class="border border-green-700 mt-8 mx-4 block lg:hidden w-64 me-auto ms-auto mb-16">
